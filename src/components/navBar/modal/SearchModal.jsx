@@ -62,7 +62,7 @@ const SearchModal = ({ onClose }) => {
 					<img
 						src={RadioImg}
 						alt="radio"
-						className="max-w-full max-h-64 object-contain"
+						className="max-w-full max-h-80 lg:max-h-full object-contain"
 					/>
 				</div>
 			</div>
