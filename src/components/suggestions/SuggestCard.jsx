@@ -6,7 +6,7 @@ const SuggestCard = () => {
 		<div className="flex flex-row m-4 hover:scale-125 transition-transform hover:shadow-md shadow-gray-500">
 			<div>
 				<img
-					className="size-16 ring-white ring-1 rounded-md"
+					className="size-16 ring-gray-400 ring-1 rounded-lg"
 					src={RtDemo}
 					alt="radiotone card image"
 				/>
