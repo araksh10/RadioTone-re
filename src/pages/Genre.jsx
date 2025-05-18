@@ -4,7 +4,7 @@ import NavBar from "../components/navBar/NavBar";
 import MenuBar from "../components/menuBar/MenuBar";
 import Statue from "../assets/genre-bg.svg";
 import BoomBox from "../assets/boombox.svg";
-import Guiter from "../assets/guiter.svg";
+// import Guiter from "../assets/guiter.svg";
 
 const Genre = () => {
 	return (
