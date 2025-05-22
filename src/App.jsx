@@ -26,10 +26,10 @@ function App() {
 					</div>
 
 					<Routes>
-						<Route path="/RadioTone/" element={<Home />} />
-						<Route path="/RadioTone/home" element={<Home />} />
-						<Route path="/RadioTone/genre" element={<Genre />} />
-						<Route path="/RadioTone/*" element={<PageNotFound />} />
+						<Route path="/RadioTone-re/" element={<Home />} />
+						<Route path="/RadioTone-re/home" element={<Home />} />
+						<Route path="/RadioTone-re/genre" element={<Genre />} />
+						<Route path="/RadioTone-re/*" element={<PageNotFound />} />
 					</Routes>
 				</div>
 

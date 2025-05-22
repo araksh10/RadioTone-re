@@ -6,7 +6,7 @@ const NavBar = () => {
 	return (
 		<div className="flex flex-row justify-between px-4 sticky top-0 z-100 bg-black">
 			<div className="w-1/3">
-				<Link to={"/RadioTone"} >
+				<Link to={"/RadioTone-re"} >
 				<img
 					className="size-16 shrink-0 hover:scale-110 transition-transform"
 					src={RadioToneLogo}
