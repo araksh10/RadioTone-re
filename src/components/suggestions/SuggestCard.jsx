@@ -3,15 +3,15 @@ import RtDemo from "../../assets/radiotone-bg.svg";
 
 const SuggestCard = () => {
 	return (
-		<div className="flex flex-row m-4 hover:scale-125 transition-transform hover:shadow-md shadow-gray-500">
+		<div className="flex flex-row m-2">
 			<div>
 				<img
-					className="size-16 ring-gray-400 ring-1 rounded-lg"
+					className="size-16 rounded-md bg-neutral-700 border-white"
 					src={RtDemo}
 					alt="radiotone card image"
 				/>
 			</div>
-			<div className="ml-1">
+			<div className="mx-2 tracking-wide">
 				<h2 className="text-xl font-bold">Music Name</h2>
 				<p className="text-gray-400 italic">Artist</p>
 			</div>

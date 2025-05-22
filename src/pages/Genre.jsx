@@ -6,8 +6,8 @@ const Genre = () => {
 	return (
 		<div className="flex flex-row w-full">
 			<div className="h-[70vh] bg-zinc-900 mt-10 p-3 pt-0 pl-0 rounded-3xl rounded-tl-full rounded-br-full">
-				<div className="relative mt-20 backdrop-blur-xs bg-white/10 rounded-3xl rounded-tl-none rounded-br-[50%] p-10 w-[30rem] h-[70vh] text-white shadow-lg z-10">
-					<h2 className="absolute -top-10 -right-10 w-48 h-48 rounded-full border-4 border-zinc-900 border-s-12 border-e-[0px] bg-neutral-700 text-center flex items-center justify-center text-2xl font-semibold hover:rotate-z-360 transition-transform">
+				<div className="relative mt-20 backdrop-blur-xs bg-white/10 rounded-3xl rounded-tl-none rounded-br-[50%] p-10 w-[30rem] h-[70vh] text-white shadow-lg z-0">
+					<h2 className="absolute -top-10 -right-10 w-48 h-48 rounded-full border-4 border-zinc-900 border-s-12 border-e-[0px] bg-neutral-700 text-center flex items-center justify-center text-2xl font-semibold hover:rotate-z-360 active:rotate-z-360 transition-transform">
 						GENRE
 					</h2>
 

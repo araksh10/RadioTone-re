@@ -35,7 +35,7 @@ const SearchModal = ({ onClose }) => {
 							value={form.title}
 							onChange={handleChange}
 							placeholder="Search"
-							className="flex-grow p-2 rounded border border-gray-300 bg-gray-300 mr-2 outline-none"
+							className="flex-grow p-2 rounded border border-gray-300 bg-gray-300 mr-2 outline-none caret-red-500"
 							required
 						/>
 						<button
@@ -47,7 +47,7 @@ const SearchModal = ({ onClose }) => {
 						<button
 							type="button"
 							onClick={onClose}
-							className="text-md bg-gray-800 w-10 h-10 p-2 rounded-full text-white hover:scale-105 transition-transform"
+							className="text-md bg-gray-800 w-10 h-10 p-2 rounded-full text-white hover:bg-red-700 hover:scale-105 transition-transform"
 						>
 							<img src={Cancel} alt="cancel" />
 						</button>
@@ -62,7 +62,7 @@ const SearchModal = ({ onClose }) => {
 					<img
 						src={RadioImg}
 						alt="radio"
-						className="max-w-full max-h-80 lg:max-h-full object-contain"
+						className="max-w-full max-h-80 lg:max-h-full object-contain hover:rotate-12 hover:scale-105 transition-transform"
 					/>
 				</div>
 			</div>

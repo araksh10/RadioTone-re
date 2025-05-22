@@ -4,27 +4,35 @@ import PageNotFound from "./pages/PageNotFound";
 import NavBar from "./components/navBar/NavBar";
 import MenuBar from "./components/menuBar/MenuBar";
 import { BrowserRouter as BRouter, Route, Routes } from "react-router-dom";
+import {useState} from "react";
 
 function App() {
+	const [showMenu, setShowMenu] = useState(false);
+
 	return (
 		<BRouter>
-			<div className="min-h-screen w-full bg-black text-white overflow-hidden select-none">
-				<div className="mx-4 bg-black rounded-xl shadow-lg">
-					<NavBar />
+			<div className="bg-black text-white md:w-svw md:h-svh">
 
-					<div className="flex flex-row w-full h-[90vh] rounded-b-xl">
-						<div className="w-1/6 p-2">
-							<MenuBar />
-						</div>
+				<NavBar />
 
-						<Routes>
-							<Route path="/RadioTone/" element={<Home />} />
-							<Route path="/RadioTone/HOME" element={<Home />} />
-							<Route path="/RadioTone/GENRE" element={<Genre />} />
-							<Route path="/RadioTone/*" element={<PageNotFound />} />
-						</Routes>
+				<div className="flex flex-col md:flex-row">
+					<div className=" sticky top-16 z-50 backdrop-blur-2xl">
+						<button className="z-50 px-4 py-4 rounded-r-full bg-neutral-700 tracking-[10px] active:border-red-700 active:text-red-700"
+						onClick={() => {setShowMenu(!showMenu)}}
+						>
+							MENU
+						</button>
+						{ showMenu && <MenuBar /> }
 					</div>
+
+					<Routes>
+						<Route path="/RadioTone/" element={<Home />} />
+						<Route path="/RadioTone/home" element={<Home />} />
+						<Route path="/RadioTone/genre" element={<Genre />} />
+						<Route path="/RadioTone/*" element={<PageNotFound />} />
+					</Routes>
 				</div>
+
 			</div>
 		</BRouter>
 	);

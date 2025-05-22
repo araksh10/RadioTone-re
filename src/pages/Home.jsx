@@ -3,16 +3,16 @@ import BackGround from "../assets/radiotone-bg.svg";
 
 const Home = () => {
 	return (
-		<div className="flex flex-row w-full">
-			<div className="w-4/5 flex justify-center items-center p-4">
+		<div className="relative min-h-svh md:flex md:flex-row">
+			<div className="fixed size-svw">
 				<img
 					src={BackGround}
 					alt="background"
-					className="max-w-full max-h-full object-contain rounded-lg shadow-md hover:scale-105 transition-transform"
+					className="fixed top-0 size-full"
 				/>
 			</div>
 
-			<div className="w-1/5 p-2">
+			<div className="sticky top-0 mt-[80svh] backdrop-blur-sm md:right-0 md:w-svw">
 				<Suggestions />
 			</div>
 		</div>

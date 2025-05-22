@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const MenuButton = ({ optName }) => {
 	return (
-		<div className="hover:bg-zinc-800 p-2 rounded-r-full rounded-tl-full active:bg-gray-900">
-			<Link to={`/RadioTone/${optName}`}>
+			<Link to={`/RadioTone/${optName.toLowerCase()}`}>
+		<div className="hover:bg-zinc-800 py-2 px-4 w-[200px] active:bg-gray-900">
 				<button>{optName}</button>
-			</Link>
 		</div>
+			</Link>
 	);
 };
 
