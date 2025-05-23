@@ -1,5 +1,5 @@
-import Statue from "../assets/genre-bg.svg";
-import BoomBox from "../assets/boombox.svg";
+import Statue from "../assets/images/genre-bg.svg";
+import BoomBox from "../assets/images/boombox.svg";
 // import Guiter from "../assets/guiter.svg";
 
 const Genre = () => {

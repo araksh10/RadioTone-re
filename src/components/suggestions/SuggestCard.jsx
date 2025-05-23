@@ -1,5 +1,5 @@
 import React from "react";
-import RtDemo from "../../assets/demo.svg";
+import RtDemo from "../../assets/images/demo.svg";
 import {Link} from "react-router-dom";
 
 const SuggestCard = () => {

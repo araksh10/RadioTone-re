@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import SearchIcon from "../../../assets/searchIcon.svg";
-import RadioImg from "../../../assets/radioNotes.svg";
-import Cancel from "../../../assets/cancel.svg";
+import SearchIcon from "../../../assets/images/searchIcon.svg";
+import RadioImg from "../../../assets/images/radioNotes.svg";
+import Cancel from "../../../assets/images/cancel.svg";
 
 const SearchModal = ({ onClose }) => {
 	const [form, setForm] = useState({

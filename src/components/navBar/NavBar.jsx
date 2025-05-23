@@ -1,4 +1,4 @@
-import RadioToneLogo from "../../assets/radiotone-01.svg";
+import RadioToneLogo from "../../assets/images/radiotone-01.svg";
 import SearchBar from "./SearchBar";
 import {Link} from "react-router-dom";
 

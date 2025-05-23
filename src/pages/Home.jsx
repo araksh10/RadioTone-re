@@ -1,5 +1,5 @@
 import Suggestions from "../components/suggestions/Suggestions";
-import BackGround from "../assets/radiotone-bg.svg";
+import BackGround from "../assets/images/radiotone-bg.svg";
 
 const Home = () => {
 	return (
