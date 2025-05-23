@@ -1,9 +1,11 @@
 import React from "react";
-import RtDemo from "../../assets/radiotone-bg.svg";
+import RtDemo from "../../assets/demo.svg";
+import {Link} from "react-router-dom";
 
 const SuggestCard = () => {
 	return (
-		<div className="flex flex-row m-2">
+		<Link to="/Radiotone-re/Player">
+		<div className="flex flex-row m-2 hover:scale-105 active:scale-95 transition-transform">
 			<div>
 				<img
 					className="size-16 rounded-md bg-neutral-700 border-white"
@@ -16,6 +18,7 @@ const SuggestCard = () => {
 				<p className="text-gray-400 italic">Artist</p>
 			</div>
 		</div>
+		</Link>
 	);
 };
 

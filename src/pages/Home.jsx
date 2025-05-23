@@ -4,7 +4,7 @@ import BackGround from "../assets/radiotone-bg.svg";
 const Home = () => {
 	return (
 		<div className="relative min-h-svh md:flex md:flex-row">
-			<div className="fixed size-svw">
+			<div className="fixed size-svw md:w-1/2">
 				<img
 					src={BackGround}
 					alt="background"
@@ -12,7 +12,7 @@ const Home = () => {
 				/>
 			</div>
 
-			<div className="sticky top-0 mt-[80svh] backdrop-blur-sm md:right-0 md:w-svw">
+			<div className="md:w-1/2 sticky top-0 mt-[80svh] bg-black/50 backdrop-blur-sm md:right-0 md:w-svw">
 				<Suggestions />
 			</div>
 		</div>

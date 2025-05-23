@@ -5,13 +5,14 @@ import NavBar from "./components/navBar/NavBar";
 import MenuBar from "./components/menuBar/MenuBar";
 import { BrowserRouter as BRouter, Route, Routes } from "react-router-dom";
 import {useState} from "react";
+import Player from "./pages/Player.jsx";
 
 function App() {
 	const [showMenu, setShowMenu] = useState(false);
 
 	return (
 		<BRouter>
-			<div className="bg-black text-white md:w-svw md:h-svh">
+			<div className="bg-black text-white min-w-svw min-h-svh">
 
 				<NavBar />
 
@@ -30,6 +31,7 @@ function App() {
 						<Route path="/RadioTone-re/home" element={<Home />} />
 						<Route path="/RadioTone-re/genre" element={<Genre />} />
 						<Route path="/RadioTone-re/*" element={<PageNotFound />} />
+						<Route path="/RadioTone-re/Player" element={<Player />} />
 					</Routes>
 				</div>
 
