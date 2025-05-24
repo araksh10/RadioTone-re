@@ -12,10 +12,13 @@ const Player = () => {
     useEffect(() => {
         const handleEnd = () => setRotator(false);
         music.addEventListener("ended", handleEnd);
+
         return () => {
+            music.pause();
+            music.currentTime = 0;
             music.removeEventListener("ended", handleEnd);
-        }
-    })
+        };
+    }, [music])
     const playMusic = () => {
         music.play();
         setRotator(true);
@@ -36,19 +39,26 @@ const Player = () => {
 
             {/*The Radio Design*/}
             <div className="relative flex justify-center items-center h-[50svh] overflow-hidden">
-                <img className={`absolute lg:size-[50svh]`} src={Speaker} alt="Speaker" />
+
+                {/*Radio Border and Speaker*/}
+                <img className={`absolute lg:size-[60svw]`} src={Speaker} alt="Speaker" />
+
+                {/*Speaker animation*/}
                 {rotator && (
-                    <img className={`absolute size-28 left-3 ${rotator ? "animate-ping" : ""}`} src={SpeakerOnly} alt="Speaker" />
+                    <img className={`absolute z-10 size-28 left-3 md:size-48 lg:size-70 lg:left-3/12 ${rotator ? "animate-ping" : ""}`} src={SpeakerOnly} alt="Speaker" />
                 )}
                 {rotator && (
-                    <img className={`absolute size-28 right-3 ${rotator ? "animate-ping" : ""}`} src={SpeakerOnly} alt="Speaker" />
+                    <img className={`absolute z-10 size-28 right-3 md:size-48 lg:size-70 lg:right-3/12 ${rotator ? "animate-ping" : ""}`} src={SpeakerOnly} alt="Speaker" />
                 )}
-                <img className="absolute size-28" src={Cassette} alt="Cassette" />
-                <div className="absolute z-10 pt-[18px] pr-12">
-                    <img className={`size-4 ${rotator ? "motion-safe:animate-spin" : ""}`} src={Ring} alt="Cassette Ring" />
+
+                {/*Cassette inside radio*/}
+                <img className="absolute size-28 md:size-48 lg:size-70" src={Cassette} alt="Cassette" />
+                {/*Rotators inside cassette*/}
+                <div className="absolute z-10 pt-[18px] pr-12 md:pt-8 md:pr-20 lg:pt-11 lg:pr-30">
+                    <img className={`size-4 md:size-7 lg:size-10 ${rotator ? "motion-safe:animate-spin" : ""}`} src={Ring} alt="Cassette Ring" />
                 </div>
-                <div className="absolute z-10 pt-[18px] pl-14">
-                    <img className={`size-4 ${rotator ? "motion-safe:animate-spin" : ""}`} src={Ring} alt="Cassette Ring" />
+                <div className="absolute z-10 pt-[18px] pl-14 md:pt-8 md:pl-24 lg:pt-11 lg:pl-34">
+                    <img className={`size-4 md:size-7 lg:size-10 ${rotator ? "motion-safe:animate-spin" : ""}`} src={Ring} alt="Cassette Ring" />
                 </div>
             </div>
 
