@@ -27,15 +27,12 @@ const Player = () => {
     const playMusic = () => {
         setPlayIt(true);
         setRotator(true);
-        console.log("working");
     };
     const pauseMusic = () => {
         setPlayIt(false);
         setRotator(false);
     };
     const stopMusic = () => {
-        music.pause();
-        music.currentTime = 0;
         setRotator(false);
     };
 
@@ -43,12 +40,12 @@ const Player = () => {
         <div className="flex flex-col w-full h-full md:items-center">
             {/*player card*/}
             <div className="flex justify-center mt-4 md:w-[500px] my-4">
-                <div className="flex flex-row w-full mx-2 border-neutral-700 border-2 rounded-xl p-2">
+                <div className="flex flex-row w-full mx-2 border-neutral-700 border-2 rounded-xl p-2 shadow-neutral-500/50 shadow-md">
                     <img src={Demo} alt="demo" className="size-24 mx-2 rounded-md" />
                     <section className="mx-2 w-full">
                         <p className="text-neutral-400 font-bold">Lana Del Rey</p>
                         <h3 className="font-bold text-xl">Ultraviolet</h3>
-                        <AudioSeeker Music={Music} playIt={playIt} />
+                        <AudioSeeker Music={Music} playIt={playIt} onEnd={stopMusic} />
                     </section>
                 </div>
             </div>
@@ -81,11 +78,11 @@ const Player = () => {
 
                 {/*The Control Buttons*/}
                 <div className="flex justify-evenly lg:mx-[50svh]">
-                    <button className="h-8 w-16 bg-neutral-700 rounded-md" onClick={playMusic}>Play</button>
-                    <button className="h-8 w-16 bg-neutral-700 rounded-md" onClick={pauseMusic}>Pause</button>
-                    <button className="h-8 w-16 bg-neutral-700 rounded-md" onClick={() => alert("Work on progress!")}>Stop</button>
-                    <button className="h-8 w-16 bg-neutral-700 rounded-md" onClick={() => alert("Work on progress!")}>Prev</button>
-                    <button className="h-8 w-16 bg-neutral-700 rounded-md" onClick={() => alert("Work on progress!")}>Next</button>
+                    <button className="h-8 w-16 border-1 border-neutral-700 rounded-full" onClick={playMusic}>Play</button>
+                    <button className="h-8 w-16 border-1 border-neutral-700 rounded-full" onClick={pauseMusic}>Pause</button>
+                    <button className="h-8 w-16 border-1 border-neutral-700 rounded-full" onClick={() => alert("Work on progress!")}>Stop</button>
+                    <button className="h-8 w-16 border-1 border-neutral-700 rounded-full" onClick={() => alert("Work on progress!")}>Prev</button>
+                    <button className="h-8 w-16 border-1 border-neutral-700 rounded-full" onClick={() => alert("Work on progress!")}>Next</button>
 
                 </div>
             </div>

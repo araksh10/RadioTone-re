@@ -12,7 +12,7 @@ const Home = () => {
 				/>
 			</div>
 
-			<div className="md:w-1/2 sticky top-0 mt-[80svh] bg-black/50 backdrop-blur-sm md:right-0 md:w-svw">
+			<div className="md:w-1/2 sticky top-0 mt-[70svh] bg-black/50 backdrop-blur-sm md:right-0 md:w-svw">
 				<Suggestions />
 			</div>
 		</div>
